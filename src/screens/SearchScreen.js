@@ -17,7 +17,7 @@ const SearchScreen = () => {
     <>
       <ImageBackground
         source={{ uri: 'https://images.unsplash.com/photo-1483137646075-6f011a268012?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80' }}
-        style={{ width: '100%', height: '100%' }} >
+        style={{ width: '100%', height: '100%' }} imageStyle={{ opacity: 0.5 }}>
         <SearchBar
           term={term}
           onTermChange={newTerm => setTerm(newTerm)}

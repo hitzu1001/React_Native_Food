@@ -24,15 +24,17 @@ const SearchBar = ({ term, onTermChange, onTermSubmitted }) => {
 
 const styles = StyleSheet.create({
   searchBar: {
-    backgroundColor: '#f0eeee',
-    height: 50,
+    backgroundColor: '#f5f5f5',
+    // backgroundColor: '#f00',
+    height: 40,
     borderRadius: 5,
     marginHorizontal: 15,
     marginTop: 10,
     flexDirection: 'row',
+    alignItems: 'center',
   },
   icon: {
-    fontSize: 35,
+    fontSize: 26,
     alignSelf: 'center',
     marginLeft: 15,
     marginRight: 20,

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, FlatList, Image, ImageBackground } from 'react-native';
+import { View, Text, StyleSheet, FlatList, Image, ImageBackground, Button } from 'react-native';
 import yelp from '../api/yelp';
 
 const ResultsShowScreen = ({ navigation }) => {
@@ -22,7 +22,7 @@ const ResultsShowScreen = ({ navigation }) => {
   return (
     <ImageBackground
       source={{ uri: 'https://images.unsplash.com/photo-1483137646075-6f011a268012?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80' }}
-      style={{ width: '100%', height: '100%' }} >
+      style={{ width: '100%', height: '100%' }} imageStyle={{ opacity: 0.5 }}>
       <View>
         <Text style={styles.name}>{result.name}</Text>
         <FlatList
@@ -32,6 +32,7 @@ const ResultsShowScreen = ({ navigation }) => {
             <Image style={styles.image} source={{ uri: item }} />
           )} />
       </View>
+      {/* <Button title='Modal Example' onPress={() => { navigation.navigate('ModalExample') }} /> */}
     </ImageBackground>
   );
 };
